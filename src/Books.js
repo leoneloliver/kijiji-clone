@@ -11,14 +11,23 @@ class Books extends Component {
     }
     
     componentDidMount(){
-        axios.get('https://api.myjson.com/bins/tf31e')
-        .then(json => json.data.Search.map(result => (
-          {
+        // axios.get('https://api.myjson.com/bins/tf31e')
+        // .then(json => json.data.Search.map(result => (
+        //   {
             
-            cover: `${result.Poster}`,
-            name: `${result.Title}`,
-            year: `${result.Year}`,
+        //     cover: `${result.Poster}`,
+        //     name: `${result.Title}`,
+        //     year: `${result.Year}`,
           
+        //   })))
+        // .then(newData => this.setState({books: newData}))
+        // .catch(error => alert(error))
+
+        axios.get('https://s3.amazonaws.com/popular-movies/movies.json')
+        .then(json => json.data.map(result => (
+          {
+            cover: `${result.poster_url}`,
+            name: `${result.title}`
           })))
         .then(newData => this.setState({books: newData}))
         .catch(error => alert(error))
@@ -43,7 +52,6 @@ class Books extends Component {
                             </div>
                             <div className="legend">
                                 <h5>{book.name}</h5>
-                                {/* <h6>{book.year}</h6> */}
                             </div>
                                 
                         </div>
