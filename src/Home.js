@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ProductRow from './ProductRow';
 import { Link } from 'react-router-dom';
 import SideBar from './SideBar';
+import Books from './Books';
 
 // import ProductDetails from './ProductDetails';
 
@@ -13,10 +14,10 @@ class Home extends Component {
     render(){
         return (
             <React.Fragment>
-               
-                <div className="prod-container flex"> 
+                <div className="prod-container flex">
                     <SideBar />
                     <div className="list">
+                        <Books/>
                         {this.props.prodList.map(function(product, i){
                             return (
                                 < Link key={i} to={`/detail/${product.id}`}>

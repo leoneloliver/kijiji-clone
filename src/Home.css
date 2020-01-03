@@ -322,6 +322,30 @@ ul.top-menu{
     margin-bottom: 35px;
     border-bottom: 1px solid #ccc;
 }
+.gallery{
+    overflow-x: auto;
+    background: #373373;
+    background: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #f1f1f2;
+}
+.book-item{
+    padding: 10px 14px;
+    padding-bottom: 0;
+}
+.book-item img{
+    width: 100px;
+    height: 150px;
+    background: #000;
+}
+.legend h5, .legend h6{
+    color: #373373;
+}
+.legend h5{
+    font-size: 11px;
+    padding: 0;
+    margin-top: 2px;
+}
 @media only screen and (max-width: 1272px) {
     .prod-container {
       width: 100%;
