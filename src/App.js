@@ -38,7 +38,6 @@ class App extends Component{
           <SearchBar searchFunc={(e) => this.filterNames(e)}/>
 		  
 
-
           <Route exact path="/" component={() => (
             < Home prodList={this.state.prodList} />
           )}
