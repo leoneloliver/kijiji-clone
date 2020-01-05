@@ -14,23 +14,17 @@ class App extends Component{
     super(props);
     this.state = {
         prodList: [],
+        store: []
     }
   }
 
   componentDidMount(){
-    this.setState({prodList: Products})
+    this.setState({prodList: Products, store: Products})
   }
 
 
   filterNames(e){
-  
-    if(e.target.value.length > 0){
-      this.setState({prodList: this.state.prodList.filter((item) => item.product_name.toLowerCase().includes(e.target.value.toLowerCase()))});
-    }else{
-      this.setState({prodList:Products });
-
-    }
-   
+    this.setState({prodList: this.state.store.filter((item) => item.product_name.toLowerCase().includes(e.target.value.toLowerCase()))});
   }
 
 

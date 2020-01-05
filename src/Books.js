@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import SearchBooks from './SearchBooks';
 
 class Books extends Component {
 
     constructor(props){
         super(props)
         this.state = {
-          books: []
+          books: [],
+          store: []
         }
     }
     
@@ -29,8 +31,12 @@ class Books extends Component {
             cover: `${result.poster_url}`,
             name: `${result.title}`
           })))
-        .then(newData => this.setState({books: newData}))
+        .then(newData => this.setState({books: newData, store: newData}))
         .catch(error => alert(error))
+    }
+
+    filterNames(e){
+        this.setState({books: this.state.store.filter((item) => item.name.toLowerCase().includes(e.target.value.toLowerCase()))})
     }
 
     render() {
@@ -41,13 +47,15 @@ class Books extends Component {
                 <div>
                     <h4 className="title-desc">Books Recommended</h4>
                 </div>
+
+                {/* <SearchBooks searchBooksFunc={(e) => this.filterNames(e)}/> */}
                 
                 <div className="flex gallery">
                 
                     {books.map(
                         book =>
                         <div className="book-item">
-                            <div>
+                            <div className="cover">
                                 <img src={book.cover} />
                             </div>
                             <div className="legend">

@@ -332,10 +332,17 @@ ul.top-menu{
 .book-item{
     padding: 10px 14px;
     padding-bottom: 0;
+    cursor: pointer;
 }
 .book-item img{
     width: 100px;
     height: 150px;
+    background: #000;
+}
+.book-item:hover img{
+    opacity: 0.8;
+}
+.cover{
     background: #000;
 }
 .legend h5, .legend h6{
