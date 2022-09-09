@@ -26,12 +26,12 @@ class SideBar extends Component {
                 </ul>
 
                 <div className="banner">
-                    <img src={banner02} />
+                    <img src={banner02} alt="banner" />
                     <br />
                     <br />
                     <br />
                     <br />
-                    <img src={banner01} />
+                    <img src={banner01} alt="banner 1" />
                 </div>
             </div>
         )

@@ -56,7 +56,7 @@ class Books extends Component {
                         book =>
                         <div className="book-item">
                             <div className="cover">
-                                <img src={book.cover} />
+                                <img src={book.cover} alt="book cover"/>
                             </div>
                             <div className="legend">
                                 <h5>{book.name}</h5>

@@ -18,12 +18,12 @@ class ProductDetails extends Component{
                         <div className="price">{product.price}</div>
                         <div className="flex box-img">
                             <div className="main-image">
-                                <img src={image} />
+                                <img src={image} alt="main image"/>
                             </div>
                             <div className="more-images">
-                                <img src={image} />
-                                <img src={image} />
-                                <img src={image} />
+                                <img src={image} alt="first image"/>
+                                <img src={image} alt="secound image"/>
+                                <img src={image} alt="more image"/>
                             </div>
                         </div>
                         <div>
@@ -39,7 +39,7 @@ class ProductDetails extends Component{
                         </div>
                         <div className="side-block">
                             <div className="user">
-                                Posted by: {product.user} <img src={product.photo} />
+                                Posted by: {product.user} <img src={product.photo} alt="foto"/>
                             </div>
                         
                         </div>

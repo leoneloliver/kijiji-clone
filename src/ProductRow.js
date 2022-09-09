@@ -8,7 +8,7 @@ class ProductRow extends Component {
             <div className="item">
                 <div className="image">
                     {/* <img src={this.props.item.photo} className="pic"/> */}
-                    <img src={image} className="pic"/>
+                    <img src={image} className="pic" alt="picture"/>
                     <div className="heart">&hearts;</div>
                 </div>
                 <div className="prod_desc">
